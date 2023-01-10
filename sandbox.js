@@ -1,18 +1,32 @@
-const name = 'shaun';
+// callbacks & foreach
+// callback functions are functions that we pass into another function/method as an argument.
 
-// functions
+const myFunc = (callbackFunc) => {
+    // do something
+    let value = 50;
+    callbackFunc(value);
+};
 
-const greet = () => 'hello';
+//callback function one way
+myFunc(function(value){
+    // do somethihng
+    console.log(value);
+});
 
-let resultOne = greet();
-console.log(resultOne);
+//callback function another way
+myFunc(value => {
+    console.log(value);
+});
 
+let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
 
-// methods
+const logPerson = (person, index) => {
+    console.log(`${index} - hello ${person}`);
+};
 
-//using dot notation
-let resultTwo = name.toUpperCase();
-console.log(resultTwo);
+people.forEach(logPerson);
 
-
-// difference is how we call them and how they are defined.
+// callback function using arrow functions
+people.forEach((person, index) => {
+    console.log(index, person);
+});
