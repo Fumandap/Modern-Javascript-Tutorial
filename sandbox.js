@@ -1,14 +1,23 @@
-// get a reference to the 'ul'
-const ul = document.querySelector('.people');
+// object literals
 
-const people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+let user = {
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@thenetninja.co.uk',
+    location: 'Berlin',
+    blogs: ['why mac & cheese rules', '10 things to make with marmite']
+};
 
-let html = ``;
+console.log(user);
+console.log(user.name);
 
-people.forEach(person => {
-    html += `<li style ="color: purple">${person}</li>`;
-});
+user.age = 35;
+console.log(user.age);
 
-console.log(html);
+const key = 'location';
 
-ul.innerHTML = html;
+console.log(user[key]);
+user['name'] = 'chun-li';
+console.log(user['name']);
+
+console.log(typeof user);
