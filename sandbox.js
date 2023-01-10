@@ -1,51 +1,18 @@
-//regular function
-// const calcArea = function(radius){
-//     return 3.14 * radius**2;
-// };
+const name = 'shaun';
 
-// arrow function
-// one parameter, you can remove the parenthesis surrounding radius
-// const calcArea = (radius) => {
+// functions
 
-// const calcArea = radius => {
-//     return 3.14 * radius**2;
-// };
+const greet = () => 'hello';
 
-// simplified arrow function
-// when returning 1 thing simply, you can move it up and remove the brackets/return
-const calcArea = radius => 3.14 * radius**2;
+let resultOne = greet();
+console.log(resultOne);
 
 
-const area = calcArea(5);
-console.log('area is: ' + area);
+// methods
 
-//practice arrow functions
-
-// const greet = function(){
-//     return 'hello, world';
-// };
-
-const greet = () => 'hello world';
-
-const result = greet();
-
-console.log(result);
+//using dot notation
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);
 
 
-// const bill = function(products, tax){
-//     let total = 0;
-//     for(let i =0; i < products.length; i++){
-//         total += products[i] + products[i] * tax;
-//     }
-//     return total;
-// };
-
-const bill = (products, tax) => {
-    let total = 0;
-    for(let i =0; i < products.length; i++){
-        total += products[i] + products[i] * tax;
-    }
-    return total;
-};
-
-console.log(bill([10,15,30], 0.2));
+// difference is how we call them and how they are defined.
