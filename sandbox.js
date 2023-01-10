@@ -1,32 +1,14 @@
-// callbacks & foreach
-// callback functions are functions that we pass into another function/method as an argument.
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
 
-const myFunc = (callbackFunc) => {
-    // do something
-    let value = 50;
-    callbackFunc(value);
-};
+const people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
 
-//callback function one way
-myFunc(function(value){
-    // do somethihng
-    console.log(value);
+let html = ``;
+
+people.forEach(function(person){
+    html += `<li style ="color: purple">${person}</li>`;
 });
 
-//callback function another way
-myFunc(value => {
-    console.log(value);
-});
+console.log(html);
 
-let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
-
-const logPerson = (person, index) => {
-    console.log(`${index} - hello ${person}`);
-};
-
-people.forEach(logPerson);
-
-// callback function using arrow functions
-people.forEach((person, index) => {
-    console.log(index, person);
-});
+ul.innerHTML = html;
