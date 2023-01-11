@@ -1,33 +1,16 @@
-const para =  document.querySelector('p');
+const link = document.querySelector('a');
 
-// console.log(para.innerText);
-// para.innerText = 'ninjas are awesome';
-// para.innerText += 'ninjas are awesome';
+// change an attribute to something else
+console.log(link.getAttribute('href'));
+link.setAttribute('href', 'https://www.thenetninja.co.uk');
+link.innerText = 'The Net Ninja Website';
 
-const paras = document.querySelectorAll('p');
+const mssg = document.querySelector('p');
 
-// print each p to the console using a foreach
-// paras.forEach(para => {
-//     console.log(para.innerText);
-//     para.innerText += ' new text';
-// });
+// get class attribute
+console.log(mssg.getAttribute('class'));
 
-// change inner html of the div content
-const content = document.querySelector('.content');
-
-// console.log(content.innerHTML);
-
-//replace html inside
-content.innerHTML = '<h2>THIS IS A NEW H2</h2>';
-
-// append the content
-content.innerHTML += '<h2>THIS IS A NEW H2</h2>';
-
-
-// Cycle through data and output
-const people = ['mario', 'luigi', 'yoshi'];
-
-people.forEach(person => {
-    content.innerHTML += `<p>${person}</p>`;
-})
-
+// change class error to success
+mssg.setAttribute('class', 'success');
+// attribute doesn't need to exist, you can just create it.
+mssg.setAttribute('style', 'color: green');
