@@ -1,19 +1,33 @@
-// get an element by ID
-// const title = document.getElementById('page-title');
-// console.log(title);
+const para =  document.querySelector('p');
 
-// // get elments by their class name
-// const errors = document.getElementsByClassName('error');
-// console.log(errors);
+// console.log(para.innerText);
+// para.innerText = 'ninjas are awesome';
+// para.innerText += 'ninjas are awesome';
 
-// console.log(errors[0]);
-//can't use foreach on an html collection
+const paras = document.querySelectorAll('p');
+
+// print each p to the console using a foreach
+// paras.forEach(para => {
+//     console.log(para.innerText);
+//     para.innerText += ' new text';
+// });
+
+// change inner html of the div content
+const content = document.querySelector('.content');
+
+// console.log(content.innerHTML);
+
+//replace html inside
+content.innerHTML = '<h2>THIS IS A NEW H2</h2>';
+
+// append the content
+content.innerHTML += '<h2>THIS IS A NEW H2</h2>';
 
 
+// Cycle through data and output
+const people = ['mario', 'luigi', 'yoshi'];
 
-// get elements by their tag name
+people.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`;
+})
 
-const paras = document.getElementsByTagName('p');
-
-console.log(paras);
-console.log(paras[1]);
