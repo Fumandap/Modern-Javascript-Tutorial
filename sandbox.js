@@ -1,16 +1,17 @@
-const link = document.querySelector('a');
+const title = document.querySelector('h1');
 
-// change an attribute to something else
-console.log(link.getAttribute('href'));
-link.setAttribute('href', 'https://www.thenetninja.co.uk');
-link.innerText = 'The Net Ninja Website';
+// title.setAttribute('style', 'margin: 50px;');
 
-const mssg = document.querySelector('p');
+console.log(title.style);
+console.log(title.style.color);
 
-// get class attribute
-console.log(mssg.getAttribute('class'));
+// add a new property with no overwriting.
+title.style.margin = '50px';
 
-// change class error to success
-mssg.setAttribute('class', 'success');
-// attribute doesn't need to exist, you can just create it.
-mssg.setAttribute('style', 'color: green');
+// update color
+title.style.color = 'crimson';
+
+// font-size becomes fontSize, all become camelcased if hyphen included.
+title.style.fontSize = '60px';
+
+title.style.margin = '';
